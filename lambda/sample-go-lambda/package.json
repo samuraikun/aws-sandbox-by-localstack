@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "serverless-localstack": "^0.4.33"
+  },
+  "scripts": {
+    "deploy": "serverless deploy --stage dev"
+  }
+}

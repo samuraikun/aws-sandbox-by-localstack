@@ -1,0 +1,18 @@
+# Created by https://www.toptal.com/developers/gitignore/api/localstack
+# Edit at https://www.toptal.com/developers/gitignore?templates=localstack
+
+### LocalStack ###
+# https://github.com/localstack/localstack
+**/.localstack
+localstack/server.test.pem
+localstack/server.test.pem.crt
+localstack/server.test.pem.key
+
+# End of https://www.toptal.com/developers/gitignore/api/localstack
+
+### Serverless ###
+# Ignore build directory
+lambda/**/.serverless
+
+node_modules
+lambda/**/node_modules

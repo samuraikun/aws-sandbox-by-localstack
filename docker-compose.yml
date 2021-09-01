@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  localstack:
+    container_name: localstack
+    image: localstack/localstack:0.12.17
+    ports:
+      - "4566:4566"
+    environment:
+      - DEFAULT_REGION=ap-northeast-1
+      - DATA_DIR=/tmp/localstack
+      - SERVICES=s3,lambda,cloudwatch,cloudformation,iam,apigateway,sns,dynamodb
+    volumes:
+      - ./localstack:/tmp/localstack
+      - ./localstack/setup.sh:/docker-entrypoint-initaws.d/setup.sh
